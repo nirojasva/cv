@@ -1,0 +1,99 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=1.4cm,right=1.4cm,top=0.95cm,bottom=0.95cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{3.5pt}{2pt}
+\setlist[itemize,1]{leftmargin=0pt,label={},topsep=0.5pt,itemsep=1.5pt,parsep=0pt}
+\setlist[itemize,2]{leftmargin=1.2em,label=\textbullet,topsep=0pt,itemsep=0pt,parsep=0pt}
+
+\begin{document}
+
+{\centering
+{\LARGE\textbf{Nicolas Rojas Varela}}\\[0.5mm]
+{\large\textbf{Ingénieur R\&D en IA | Research Engineer}}\\[0.5mm]
+Annecy, Auvergne-Rhône-Alpes, France\\
++33 7 45 61 10 20 \textbar{} \href{mailto:nicolasrojas1111@gmail.com}{nicolasrojas1111@gmail.com} \textbar{} \href{https://github.com/nirojasva}{GitHub}\\
+Autorisé à travailler en France\par}
+\vspace{1pt}
+
+\section*{Profil}
+Chercheur en informatique et ingénieur R\&D spécialisé dans l'apprentissage automatique appliqué aux séries temporelles, aux flux de données et à la détection d'anomalies. Expérience en conception d'algorithmes, évaluation expérimentale et recherche appliquée dans des contextes académique et industriel. Doctorant CIFRE à l'Université Clermont Auvergne, en collaboration avec Pfeiffer Vacuum+Fab Solutions, avec une soutenance prévue en mars 2027 (\href{https://spectral-anomaly-detector.limos.fr/index_en.html}{URL Page Web de Thèse}). Recherche un poste d'Ingénieur R\&D en IA ou de Research Engineer.
+
+\section*{Expertise en recherche}
+\textbf{Domaines :} Détection d'anomalies, apprentissage non supervisé, flux de données, séries temporelles, données spectrales, classification, interprétabilité\\
+\textbf{Méthodes :} K-NN, Isolation Forest, autoencodeurs, évaluation comparative (benchmarking), reproductibilité expérimentale\\
+\textbf{Programmation et bibliothèques :} Python, scikit-learn, CapyMOA, PySAD, Aeon, sktime, PyTorch, TensorFlow\\
+\textbf{Outils complémentaires :} SQL, R, Git, GCP, pipelines de données, ETL, API
+
+\section*{Expérience en R\&D et recherche}
+\begin{itemize}
+\item \textbf{Ingénieur R\&D / Doctorant CIFRE} \hfill Mars 2024 -- mars 2027 (prévu)\\
+\textit{Pfeiffer Vacuum+Fab Solutions et LIMOS} \hfill Annecy, France
+\begin{itemize}
+\item Conception et évaluation de méthodes non supervisées pour la détection d'anomalies spectrales en temps réel dans un contexte industriel (modèle OnlineBootKNN : 85\% de taux de détection et 0,5\% de faux positifs).
+\item Formulation d'approches d'apprentissage en ligne sur des flux de données spectrales, avec optimisation de l'efficacité algorithmique et de l'interprétabilité des modèles (temps de traitement inférieur à 1 s par spectre).
+\item Développement de pipelines expérimentaux reproductibles en Python avec CapyMOA, scikit-learn et PySAD.
+\end{itemize}
+
+\item \textbf{Chercheur en apprentissage automatique} \hfill Novembre 2023 -- mars 2024\\
+\textit{LIMOS} \hfill Aubière, France
+\begin{itemize}
+\item Développement d'algorithmes de classification de séries temporelles et de détection d'anomalies dans les flux de données (méthode interprétable RSAST à base de shapelets, temps d'exécution de 3 min 15 s sur des séries de longueur 1024).
+\item Conception de protocoles expérimentaux comparatifs, évaluation de modèles et intégration open-source avec Aeon, scikit-learn et sktime.
+\end{itemize}
+
+\item \textbf{Stagiaire Data Miner} \hfill Mars 2023 -- septembre 2023\\
+\textit{LIMOS} \hfill Aubière, France
+\begin{itemize}
+\item Analyse et classification interprétable de séries temporelles à l'aide de méthodes et de bibliothèques Python, notamment Aeon, scikit-learn et sktime.
+\end{itemize}
+\end{itemize}
+
+\section*{Publications scientifiques}
+\begin{itemize}
+\item \textbf{Varela, N. R.}, Ah-Pine, J., \& Nguifo, E. M. (2026). \textit{OnlineBootKNN: An Unsupervised Framework for Detecting Anomalies in Spectral Data Streams}. \textit{Proceedings of the AAAI Conference on Artificial Intelligence}, 40(18), 15797--15805. \href{https://doi.org/10.1609/aaai.v40i18.38611}{DOI} \textbar{} \href{https://github.com/nirojasva/spectral-benchmark}{Code}
+\item \textbf{Varela, N. R.}, Ah-Pine, J., \& Nguifo, E. M. (2026). \textit{The BV4 Benchmark for Unsupervised Anomaly Detection in High-Dimensional Spectral Data Streams}. \textit{Advances in Neural Information Processing Systems (NeurIPS), Datasets and Benchmarks Track}.
+\item \textbf{Varela, N. R.}, Mbouopda, M. F., \& Nguifo, E. M. (2023). \textit{RSAST: Sampling Shapelets for Interpretable Time Series Classification}. \textit{Conférence Francophone sur l'Apprentissage Automatique (CAP)}. \href{https://hal.science/hal-04311309/}{HAL} \textbar{} \href{https://www.aeon-toolkit.org/en/v1.1.0/api_reference/auto_generated/aeon.transformations.collection.shapelet_based.RSAST.html}{Code (Aeon)}
+\end{itemize}
+
+\section*{Workshops et présentations}
+\begin{itemize}
+\item Amroun, C., \textbf{Varela, N. R.}, \& Nguifo, E. M. (2026). \textit{Enhanced OBKNN: An Efficient Framework for Anomaly Detection in Spectral Data Streams}. \textit{40th Conference on Neural Information Processing Systems (NeurIPS 2026), Workshop on Time Series in the Age of Large Models (TS-LIMITS)}. \href{https://hal.science/hal-05803665/}{HAL}
+\item \textbf{Varela, N. R.}, Ah-Pine, J., \& Nguifo, E. M. (2026). \textit{OnlineBootKNN: An Unsupervised Framework for Detecting Anomalies in Spectral Data Streams}. \textit{ECML PKDD 2026 (Nectar Track)}.
+\end{itemize}
+
+\section*{Formation}
+\begin{itemize}
+\item \textbf{Doctorat en informatique} -- \textit{Université Clermont Auvergne} (Soutenance prévue en mars 2027) \hfill 2024 -- 2027
+\item \textbf{Master international en informatique} -- \textit{ISIMA, Clermont-Ferrand} \hfill 2022 -- 2023
+\item \textbf{Spécialisation en statistiques} -- \textit{Universidad Nacional de Colombia} \hfill 2020 -- 2021
+\item \textbf{Ingénierie industrielle} -- \textit{Universidad Nacional de Colombia} \hfill 2012 -- 2017
+\end{itemize}
+
+\section*{Expérience professionnelle complémentaire}
+\begin{itemize}
+\item \textbf{Analyste Business Intelligence} \hfill Octobre 2021 -- août 2022\\
+\textit{Center Source, Inc.} \hfill Barranquilla, Colombie
+\begin{itemize}
+\item Conception de pipelines ETL et modélisation de données (suivi d'indicateurs clients clés pour le business, actualisés en temps réel).
+\item Développement de tableaux de bord et de solutions analytiques avec Python, R, Tableau et Exasol.
+\end{itemize}
+
+\item \textbf{Analyste de données} \hfill Août 2018 -- octobre 2021\\
+\textit{Seguros Bolívar S.A.} \hfill Bogotá, Colombie
+\begin{itemize}
+\item Extraction, modélisation et analyse de données à grande échelle (amélioration du niveau de service client jusqu'à 80\%).
+\item Utilisation de Python, R, Excel, GCP, Dataiku et Power BI en support aux activités opérationnelles.
+\end{itemize}
+\end{itemize}
+
+\section*{Langues}
+Espagnol : langue maternelle \textbar{} Anglais : niveau professionnel \textbar{} Français : niveau professionnel
+
+\end{document}

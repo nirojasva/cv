@@ -1,0 +1,33 @@
+name: Compile LaTeX CVs
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX Documents
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: |
+            cv_en_research.tex
+            cv_en_data.tex
+            cv_fr_research.tex
+            cv_fr_data.tex
+
+      - name: Upload PDF Release
+        uses: softprops/action-gh-release@v2
+        if: github.ref == 'refs/heads/main'
+        with:
+          tag_name: latest
+          name: Latest CVs
+          files: "*.pdf"
