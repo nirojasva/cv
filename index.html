@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nicolas Rojas Varela | Machine Learning Engineer & AI Researcher</title>
+  <meta name="description" content="Personal portfolio and interactive CV of Nicolas Rojas Varela. PhD researcher in AI/ML, Anomaly Detection, Time Series & Data Streams at Université Clermont Auvergne - LIMOS." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+      <a href="#" class="nav-brand">
+        <span>Nicolas Rojas Varela</span>
+        <span class="brand-badge" id="nav-track-badge">CIFRE PhD</span>
+      </a>
+
+      <div class="nav-controls">
+        <!-- Track Toggle -->
+        <div class="control-btn-group" title="Switch focus perspective">
+          <button class="control-btn active" id="btn-track-research" onclick="setTrack('research')">
+            <span>🔬</span>
+            <span class="btn-text" data-en="Research / AI" data-fr="Recherche / IA">Research / AI</span>
+          </button>
+          <button class="control-btn" id="btn-track-data" onclick="setTrack('data')">
+            <span>📊</span>
+            <span class="btn-text" data-en="ML & Data" data-fr="ML & Data">ML & Data</span>
+          </button>
+        </div>
+
+        <!-- Language Toggle -->
+        <div class="control-btn-group" title="Switch language">
+          <button class="control-btn active" id="btn-lang-en" onclick="setLanguage('en')">EN</button>
+          <button class="control-btn" id="btn-lang-fr" onclick="setLanguage('fr')">FR</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="pulse-dot"></span>
+          <span id="hero-badge" 
+                data-en="Industrial PhD (CIFRE) Candidate @ Université Clermont Auvergne - LIMOS (Defense March 2027)" 
+                data-fr="Doctorant CIFRE @ Université Clermont Auvergne - LIMOS (Soutenance mars 2027)">
+            Industrial PhD (CIFRE) Candidate @ Université Clermont Auvergne - LIMOS (Defense March 2027)
+          </span>
+        </div>
+
+        <h1 class="hero-title">
+          <span id="hero-greeting" data-en="Hi, I'm" data-fr="Bonjour, je suis">Hi, I'm</span> 
+          <span class="highlight">Nicolas Rojas</span>
+        </h1>
+
+        <div class="hero-subtitle" id="hero-role"
+             data-en="AI R&D Engineer | Machine Learning Researcher | Data Scientist"
+             data-fr="Ingénieur R&D IA | Chercheur en Machine Learning | Data Scientist">
+          AI R&D Engineer | Machine Learning Researcher | Data Scientist
+        </div>
+
+        <p class="hero-bio" id="hero-bio"
+           data-en="Computer Science Engineer with over 7 years of combined experience in data analysis, statistical modeling, and applied research. Specialized in unsupervised anomaly detection, time series classification, and real-time data stream processing in Python."
+           data-fr="Ingénieur en informatique avec plus de 7 ans d'expérience cumulée en analyse de données, modélisation statistique et recherche appliquée. Spécialisé en détection d'anomalies non supervisée, classification de séries temporelles et flux de données en temps réel.">
+          Computer Science Engineer with over 7 years of combined experience in data analysis, statistical modeling, and applied research. Specialized in unsupervised anomaly detection, time series classification, and real-time data stream processing in Python.
+        </p>
+
+        <div class="hero-meta">
+          <div class="meta-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+            <span>Annecy, France</span>
+          </div>
+          <div class="meta-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+            <a href="mailto:nicolasrojas1111@gmail.com" style="color: inherit; text-decoration: none;">nicolasrojas1111@gmail.com</a>
+          </div>
+          <div class="meta-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span id="hero-auth" data-en="Authorized to work in France" data-fr="Autorisé à travailler en France">Authorized to work in France</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#downloads" class="btn btn-primary">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+            <span data-en="Download PDF CVs" data-fr="Télécharger les CVs PDF">Download PDF CVs</span>
+          </a>
+          <a href="https://github.com/nirojasva" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://spectral-anomaly-detector.limos.fr/index_en.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <span>🌐</span>
+            <span data-en="Thesis Project" data-fr="Projet de Thèse">Thesis Project</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY STATS / METRICS -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value">85%</div>
+        <div class="stat-label" data-en="Online Anomaly Detection Rate" data-fr="Taux de détection d'anomalies en ligne">Online Anomaly Detection Rate</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">&lt; 1s</div>
+        <div class="stat-label" data-en="Stream Latency per Spectrum" data-fr="Latence par spectre en flux continu">Stream Latency per Spectrum</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">AAAI / NeurIPS</div>
+        <div class="stat-label" data-en="Top-Tier AI Publications" data-fr="Publications de premier rang en IA">Top-Tier AI Publications</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">7+ Years</div>
+        <div class="stat-label" data-en="Data Science & ML Experience" data-fr="Années d'expérience Data & ML">Data Science & ML Experience</div>
+      </div>
+    </div>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section" id="experience">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg class="section-icon" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z"/></svg>
+          <span data-en="Professional Experience" data-fr="Expérience Professionnelle">Professional Experience</span>
+        </h2>
+        <span class="section-subtitle" data-en="Industry, R&D & Applied Research" data-fr="Industrie, R&D et Recherche Appliquée">Industry, R&D & Applied Research</span>
+      </div>
+
+      <div class="timeline">
+        <!-- CIFRE PhD -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role" 
+                   data-en="R&D Engineer / Industrial PhD Researcher (CIFRE)" 
+                   data-fr="Ingénieur R&D / Doctorant CIFRE">
+                R&D Engineer / Industrial PhD Researcher (CIFRE)
+              </div>
+              <div class="timeline-company">
+                <span>Université Clermont Auvergne - LIMOS</span>
+                <span class="timeline-badge">CIFRE</span>
+              </div>
+            </div>
+            <div class="timeline-date" data-en="Mar 2024 — Mar 2027 (Expected)" data-fr="Mars 2024 — Mars 2027 (Prévu)">Mar 2024 — Mar 2027 (Expected)</div>
+          </div>
+          <div class="timeline-location">📍 Annecy, France</div>
+          <div class="timeline-body">
+            <ul>
+              <li data-en="Design and evaluation of unsupervised models for real-time spectral anomaly detection in an industrial semiconductor context (<span class='metric-pill'>OnlineBootKNN model: 85% detection rate and 0.5% false positive rate</span>)."
+                  data-fr="Conception et évaluation de modèles non supervisés pour la détection d'anomalies spectrales en temps réel dans un contexte industriel (<span class='metric-pill'>modèle OnlineBootKNN : 85% de taux de détection et 0,5% de faux positifs</span>).">
+                Design and evaluation of unsupervised models for real-time spectral anomaly detection in an industrial semiconductor context (<span class="metric-pill">OnlineBootKNN model: 85% detection rate and 0.5% false positive rate</span>).
+              </li>
+              <li data-en="Development of real-time Python streaming pipelines using <strong>CapyMOA</strong>, <strong>scikit-learn</strong>, and <strong>PySAD</strong> (<span class='metric-pill'>processing latency &lt; 1 s per spectrum</span>)."
+                  data-fr="Développement de pipelines Python en streaming avec <strong>CapyMOA</strong>, <strong>scikit-learn</strong> et <strong>PySAD</strong> (<span class='metric-pill'>temps de traitement &lt; 1 s par spectre</span>).">
+                Development of real-time Python streaming pipelines using <strong>CapyMOA</strong>, <strong>scikit-learn</strong>, and <strong>PySAD</strong> (<span class="metric-pill">processing latency &lt; 1 s per spectrum</span>).
+              </li>
+              <li data-en="Formulation of online learning approaches on high-dimensional spectral data streams, optimizing algorithmic efficiency and interpretability for microelectronics vacuum process chamber monitoring."
+                  data-fr="Formulation d'approches d'apprentissage en ligne sur des flux spectraux haute dimension, optimisant l'efficacité algorithmique et l'interprétabilité pour le suivi des chambres à vide en microélectronique.">
+                Formulation of online learning approaches on high-dimensional spectral data streams, optimizing algorithmic efficiency and interpretability for microelectronics vacuum process chamber monitoring.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ML Researcher LIMOS -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role" 
+                   data-en="Machine Learning Researcher" 
+                   data-fr="Chercheur en Apprentissage Automatique">
+                Machine Learning Researcher
+              </div>
+              <div class="timeline-company">LIMOS (CNRS / UCA)</div>
+            </div>
+            <div class="timeline-date" data-en="Nov 2023 — Mar 2024" data-fr="Nov 2023 — Mars 2024">Nov 2023 — Mar 2024</div>
+          </div>
+          <div class="timeline-location">📍 Aubière, France</div>
+          <div class="timeline-body">
+            <ul>
+              <li data-en="Development of time series classification and anomaly detection algorithms for data streams (interpretable shapelet-based <strong>RSAST</strong> method, <span class='metric-pill'>3 min 15 s execution time on length-1024 series</span>)."
+                  data-fr="Développement d'algorithmes de classification de séries temporelles et détection d'anomalies (méthode <strong>RSAST</strong> basée sur des shapelets, <span class='metric-pill'>3 min 15 s sur des séries de longueur 1024</span>).">
+                Development of time series classification and anomaly detection algorithms for data streams (interpretable shapelet-based <strong>RSAST</strong> method, <span class="metric-pill">3 min 15 s execution time on length-1024 series</span>).
+              </li>
+              <li data-en="Comparative evaluation protocols, benchmarking and open-source contribution to the <strong>Aeon</strong> toolkit, <strong>scikit-learn</strong>, and <strong>sktime</strong>."
+                  data-fr="Protocoles d'évaluation comparative, benchmarking et intégration open-source dans <strong>Aeon</strong>, <strong>scikit-learn</strong> et <strong>sktime</strong>.">
+                Comparative evaluation protocols, benchmarking and open-source contribution to the <strong>Aeon</strong> toolkit, <strong>scikit-learn</strong>, and <strong>sktime</strong>.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Data Mining Intern -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role" 
+                   data-en="Data Mining Intern" 
+                   data-fr="Stagiaire Data Mining & Séries Temporelles">
+                Data Mining Intern
+              </div>
+              <div class="timeline-company">LIMOS</div>
+            </div>
+            <div class="timeline-date" data-en="Mar 2023 — Sep 2023" data-fr="Mars 2023 — Sept 2023">Mar 2023 — Sep 2023</div>
+          </div>
+          <div class="timeline-location">📍 Aubière, France</div>
+          <div class="timeline-body">
+            <ul>
+              <li data-en="Interpretable time series analysis and classification using Python methods and tools (notably Aeon, scikit-learn, sktime)."
+                  data-fr="Analyse et classification interprétable de séries temporelles avec Python, Aeon, scikit-learn et sktime.">
+                Interpretable time series analysis and classification using Python methods and tools (notably Aeon, scikit-learn, sktime).
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- BI Analyst -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role" 
+                   data-en="Business Intelligence Analyst" 
+                   data-fr="Analyste Business Intelligence">
+                Business Intelligence Analyst
+              </div>
+              <div class="timeline-company">Center Source, Inc.</div>
+            </div>
+            <div class="timeline-date" data-en="Oct 2021 — Aug 2022" data-fr="Oct 2021 — Août 2022">Oct 2021 — Aug 2022</div>
+          </div>
+          <div class="timeline-location">📍 Barranquilla, Colombia</div>
+          <div class="timeline-body">
+            <ul>
+              <li data-en="Design of ETL pipelines and enterprise data modeling, tracking key business customer indicators in real time."
+                  data-fr="Conception de pipelines ETL et modélisation de données d'entreprise avec suivi en temps réel des KPI clients.">
+                Design of ETL pipelines and enterprise data modeling, tracking key business customer indicators in real time.
+              </li>
+              <li data-en="Built dashboards and automated analytics solutions using Python, R, Tableau, and Exasol."
+                  data-fr="Développement de tableaux de bord et de solutions d'analyse avec Python, R, Tableau et Exasol.">
+                Built dashboards and automated analytics solutions using Python, R, Tableau, and Exasol.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Data Analyst Seguros Bolivar -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role" 
+                   data-en="Data Analyst" 
+                   data-fr="Analyste Données (Data Analyst)">
+                Data Analyst
+              </div>
+              <div class="timeline-company">Seguros Bolívar S.A.</div>
+            </div>
+            <div class="timeline-date" data-en="Aug 2018 — Oct 2021" data-fr="Août 2018 — Oct 2021">Aug 2018 — Oct 2021</div>
+          </div>
+          <div class="timeline-location">📍 Bogotá, Colombia</div>
+          <div class="timeline-body">
+            <ul>
+              <li data-en="Large-scale data extraction, modeling, and analytics using GCP and Dataiku (<span class='metric-pill'>improving customer service levels by up to 80%</span>)."
+                  data-fr="Extraction, modélisation et analyse de données à grande échelle sur GCP et Dataiku (<span class='metric-pill'>amélioration du taux de service jusqu'à 80%</span>).">
+                Large-scale data extraction, modeling, and analytics using GCP and Dataiku (<span class="metric-pill">improving customer service levels by up to 80%</span>).
+              </li>
+              <li data-en="Built automated reports and data models using Python, R, SQL, Power BI, and Excel."
+                  data-fr="Développement de rapports automatisés et de modèles avec Python, R, SQL, Power BI et Excel.">
+                Built automated reports and data models using Python, R, SQL, Power BI, and Excel.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCIENTIFIC PUBLICATIONS & BENCHMARKS -->
+    <section class="section" id="publications">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg class="section-icon" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+          <span data-en="Publications & Benchmarks" data-fr="Publications & Jeux de Données">Publications & Benchmarks</span>
+        </h2>
+        <span class="section-subtitle" data-en="Peer-reviewed papers at AAAI, NeurIPS & CAP" data-fr="Articles évalués par les pairs à AAAI, NeurIPS et CAP">Peer-reviewed papers at AAAI, NeurIPS & CAP</span>
+      </div>
+
+      <div class="pub-grid">
+        <!-- AAAI 2026 -->
+        <div class="pub-card">
+          <div class="pub-top">
+            <span class="pub-venue-badge badge-aaai">AAAI 2026</span>
+            <span class="pub-year">Vol. 40(18), pp. 15797–15805</span>
+          </div>
+          <div class="pub-title">
+            OnlineBootKNN: An Unsupervised Framework for Detecting Anomalies in Spectral Data Streams
+          </div>
+          <div class="pub-authors">
+            <strong>Varela, N. R.</strong>, Ah-Pine, J., & Mephu Nguifo, E.
+          </div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1609/aaai.v40i18.38611" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>📄</span> DOI Paper
+            </a>
+            <a href="https://github.com/nirojasva/spectral-benchmark" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>💻</span> Code (spectral-benchmark)
+            </a>
+          </div>
+        </div>
+
+        <!-- NeurIPS 2026 Datasets -->
+        <div class="pub-card">
+          <div class="pub-top">
+            <span class="pub-venue-badge badge-neurips">NeurIPS 2026</span>
+            <span class="pub-year">Datasets & Benchmarks Track</span>
+          </div>
+          <div class="pub-title">
+            The BV4 Benchmark for Unsupervised Anomaly Detection in High-Dimensional Spectral Data Streams
+          </div>
+          <div class="pub-authors">
+            <strong>Varela, N. R.</strong>, Ah-Pine, J., & Mephu Nguifo, E.
+          </div>
+          <div class="pub-links">
+            <a href="https://spectral-anomaly-detector.limos.fr/index_en.html" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>📊</span> Benchmark Details
+            </a>
+          </div>
+        </div>
+
+        <!-- CAP 2023 -->
+        <div class="pub-card">
+          <div class="pub-top">
+            <span class="pub-venue-badge badge-cap">CAP 2023</span>
+            <span class="pub-year">Conférence Francophone sur l'Apprentissage Automatique</span>
+          </div>
+          <div class="pub-title">
+            RSAST: Sampling Shapelets for Interpretable Time Series Classification
+          </div>
+          <div class="pub-authors">
+            <strong>Varela, N. R.</strong>, Mbouopda, M. F., & Mephu Nguifo, E.
+          </div>
+          <div class="pub-links">
+            <a href="https://hal.science/hal-04311309/" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>📖</span> HAL Open Access
+            </a>
+            <a href="https://www.aeon-toolkit.org/en/v1.1.0/api_reference/auto_generated/aeon.transformations.collection.shapelet_based.RSAST.html" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>⚡</span> Official Code (Aeon Toolkit)
+            </a>
+          </div>
+        </div>
+
+        <!-- NeurIPS TS-LIMITS Workshop -->
+        <div class="pub-card">
+          <div class="pub-top">
+            <span class="pub-venue-badge badge-neurips">NeurIPS 2026 Workshop</span>
+            <span class="pub-year">Time Series in the Age of Large Models (TS-LIMITS)</span>
+          </div>
+          <div class="pub-title">
+            Enhanced OBKNN: An Efficient Framework for Anomaly Detection in Spectral Data Streams
+          </div>
+          <div class="pub-authors">
+            Amroun, C., <strong>Varela, N. R.</strong>, & Mephu Nguifo, E.
+          </div>
+          <div class="pub-links">
+            <a href="https://hal.science/hal-05803665/" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+              <span>📖</span> HAL Publication
+            </a>
+          </div>
+        </div>
+
+        <!-- ECML PKDD -->
+        <div class="pub-card">
+          <div class="pub-top">
+            <span class="pub-venue-badge badge-ecml">ECML PKDD 2026 & 2024</span>
+            <span class="pub-year">Nectar Track & PhD Forum</span>
+          </div>
+          <div class="pub-title">
+            Study & Design of Interpretable Models for Detecting Anomalies in Spectral Data Streams
+          </div>
+          <div class="pub-authors">
+            <strong>Varela, N. R.</strong>, Ah-Pine, J., & Mephu Nguifo, E.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS MATRIX -->
+    <section class="section" id="skills">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg class="section-icon" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z"/><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z"/></svg>
+          <span data-en="Technical Skills" data-fr="Compétences Techniques">Technical Skills</span>
+        </h2>
+        <span class="section-subtitle" data-en="Core ML, Streaming & Engineering Stack" data-fr="Stack IA, Streaming & Ingénierie des données">Core ML, Streaming & Engineering Stack</span>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-category-title">
+            <span>🧠</span>
+            <span data-en="Machine Learning & Anomaly Detection" data-fr="Machine Learning & Détection d'anomalies">Machine Learning & Anomaly Detection</span>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip featured">Online Anomaly Detection</span>
+            <span class="skill-chip featured">Data Streams</span>
+            <span class="skill-chip">Time Series Classification</span>
+            <span class="skill-chip">Spectral Data</span>
+            <span class="skill-chip">OnlineBootKNN</span>
+            <span class="skill-chip">Isolation Forest</span>
+            <span class="skill-chip">Autoencoders</span>
+            <span class="skill-chip">Model Benchmarking</span>
+            <span class="skill-chip">Interpretability</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-title">
+            <span>📦</span>
+            <span data-en="Libraries & Frameworks" data-fr="Bibliothèques & Frameworks">Libraries & Frameworks</span>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip featured">CapyMOA</span>
+            <span class="skill-chip featured">PySAD</span>
+            <span class="skill-chip featured">Aeon</span>
+            <span class="skill-chip">scikit-learn</span>
+            <span class="skill-chip">sktime</span>
+            <span class="skill-chip">PyTorch</span>
+            <span class="skill-chip">TensorFlow</span>
+            <span class="skill-chip">NumPy & Pandas</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-title">
+            <span>💻</span>
+            <span data-en="Languages & Cloud" data-fr="Langages & Cloud">Languages & Cloud</span>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip featured">Python</span>
+            <span class="skill-chip">SQL</span>
+            <span class="skill-chip">R</span>
+            <span class="skill-chip">Git</span>
+            <span class="skill-chip">GCP (Google Cloud)</span>
+            <span class="skill-chip">REST APIs</span>
+            <span class="skill-chip">Docker</span>
+            <span class="skill-chip">LaTeX</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-title">
+            <span>📊</span>
+            <span data-en="Data Engineering & BI" data-fr="Data Engineering & BI">Data Engineering & BI</span>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip featured">ETL Pipelines</span>
+            <span class="skill-chip">Dataiku</span>
+            <span class="skill-chip">Exasol</span>
+            <span class="skill-chip">Tableau</span>
+            <span class="skill-chip">Power BI</span>
+            <span class="skill-chip">Stream Processing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section" id="education">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg class="section-icon" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg>
+          <span data-en="Education" data-fr="Formation & Diplômes">Education</span>
+        </h2>
+        <span class="section-subtitle" data-en="Academic Background" data-fr="Parcours Académique">Academic Background</span>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div>
+            <div class="edu-degree" data-en="PhD in Computer Science" data-fr="Doctorat en Informatique">PhD in Computer Science</div>
+            <div class="edu-school">Université Clermont Auvergne</div>
+            <div class="edu-details" data-en="CIFRE Thesis at Université Clermont Auvergne - LIMOS. Defense scheduled for March 2027." data-fr="Thèse CIFRE à l'Université Clermont Auvergne - LIMOS. Soutenance prévue en mars 2027.">
+              CIFRE Thesis at Université Clermont Auvergne - LIMOS. Defense scheduled for March 2027.
+            </div>
+          </div>
+          <div class="edu-year">2024 — 2027</div>
+        </div>
+
+        <div class="edu-card">
+          <div>
+            <div class="edu-degree" data-en="International Master in Computer Science" data-fr="Master International en Informatique">International Master in Computer Science</div>
+            <div class="edu-school">ISIMA, Clermont-Ferrand</div>
+            <div class="edu-details" data-en="High-performance computing, data science, algorithmics." data-fr="Calcul haute performance, science des données, algorithmique.">
+              High-performance computing, data science, algorithmics.
+            </div>
+          </div>
+          <div class="edu-year">2022 — 2023</div>
+        </div>
+
+        <div class="edu-card">
+          <div>
+            <div class="edu-degree" data-en="Postgraduate Specialization in Statistics" data-fr="Spécialisation Postgrade en Statistique">Postgraduate Specialization in Statistics</div>
+            <div class="edu-school">Universidad Nacional de Colombia</div>
+            <div class="edu-details" data-en="Statistical inference, modeling, multivariate data analysis." data-fr="Inférence statistique, modélisation, analyse multidimensionnelle.">
+              Statistical inference, modeling, multivariate data analysis.
+            </div>
+          </div>
+          <div class="edu-year">2020 — 2021</div>
+        </div>
+
+        <div class="edu-card">
+          <div>
+            <div class="edu-degree" data-en="BSc in Industrial Engineering" data-fr="Diplôme d'Ingénieur Industriel (BSc)">BSc in Industrial Engineering</div>
+            <div class="edu-school">Universidad Nacional de Colombia</div>
+            <div class="edu-details" data-en="Operations research, quantitative modeling, systems optimization." data-fr="Recherche opérationnelle, modélisation quantitative, optimisation.">
+              Operations research, quantitative modeling, systems optimization.
+            </div>
+          </div>
+          <div class="edu-year">2012 — 2017</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOADS BAR -->
+    <div class="download-bar" id="downloads">
+      <div class="download-text">
+        <h3 data-en="Download Official PDF CVs" data-fr="Télécharger les CVs PDF Officiels">Download Official PDF CVs</h3>
+        <p data-en="Compiled directly from the version-controlled LaTeX source files in this repository." 
+           data-fr="Compilés directement à partir des sources LaTeX sous contrôle de version dans ce dépôt.">
+          Compiled directly from the version-controlled LaTeX source files in this repository.
+        </p>
+      </div>
+
+      <div class="download-actions">
+        <!-- English Research -->
+        <a href="cv_en_research.pdf" class="btn btn-primary" download title="English CV - Research Track">
+          <span>🇬🇧 Research PDF</span>
+        </a>
+        <!-- English Data -->
+        <a href="cv_en_data.pdf" class="btn btn-secondary" download title="English CV - ML & Data Science">
+          <span>🇬🇧 Data & ML PDF</span>
+        </a>
+        <!-- French Research -->
+        <a href="cv_fr_research.pdf" class="btn btn-secondary" download title="French CV - Recherche">
+          <span>🇫🇷 Recherche PDF</span>
+        </a>
+        <!-- French Data -->
+        <a href="cv_fr_data.pdf" class="btn btn-secondary" download title="French CV - Data & ML">
+          <span>🇫🇷 Data & ML PDF</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 Nicolas Rojas Varela. <span data-en="Built with clean HTML/CSS & automated LaTeX GitHub Actions." data-fr="Conçu avec du HTML/CSS moderne et des GitHub Actions LaTeX.">Built with clean HTML/CSS & automated LaTeX GitHub Actions.</span></p>
+      <p style="margin-top: 0.5rem;">
+        <a href="https://github.com/nirojasva/cv" target="_blank" rel="noopener noreferrer">github.com/nirojasva/cv</a>
+      </p>
+    </footer>
+  </div>
+
+  <!-- CLIENT-SIDE SCRIPT FOR INTERACTIVITY -->
+  <script>
+    let currentLang = localStorage.getItem('cv_lang') || 'en';
+    let currentTrack = localStorage.getItem('cv_track') || 'research';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('cv_lang', lang);
+
+      // Toggle button states
+      document.getElementById('btn-lang-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-lang-fr').classList.toggle('active', lang === 'fr');
+
+      // Update all elements with data-en / data-fr
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const text = el.getAttribute(`data-${lang}`);
+        if (text) {
+          el.innerHTML = text;
+        }
+      });
+
+      // Update HTML lang attribute
+      document.documentElement.lang = lang;
+    }
+
+    function setTrack(track) {
+      currentTrack = track;
+      localStorage.setItem('cv_track', track);
+
+      document.getElementById('btn-track-research').classList.toggle('active', track === 'research');
+      document.getElementById('btn-track-data').classList.toggle('active', track === 'data');
+
+      const badge = document.getElementById('nav-track-badge');
+      if (track === 'research') {
+        badge.textContent = 'AI Research';
+        document.getElementById('hero-role').textContent = currentLang === 'en' 
+          ? 'AI R&D Engineer | Machine Learning Researcher' 
+          : 'Ingénieur R&D IA | Chercheur en Machine Learning';
+      } else {
+        badge.textContent = 'ML & Data';
+        document.getElementById('hero-role').textContent = currentLang === 'en' 
+          ? 'Machine Learning Engineer | Data Scientist' 
+          : 'Ingénieur Machine Learning | Data Scientist';
+      }
+    }
+
+    // Initialize state
+    document.addEventListener('DOMContentLoaded', () => {
+      setLanguage(currentLang);
+      setTrack(currentTrack);
+    });
+  </script>
+</body>
+</html>

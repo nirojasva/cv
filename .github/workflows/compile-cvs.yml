@@ -1,0 +1,62 @@
+name: Compile LaTeX CVs & Deploy Web Page
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX Documents
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: |
+            cv_en_research.tex
+            cv_en_data.tex
+            cv_fr_research.tex
+            cv_fr_data.tex
+
+      - name: Upload PDF Release
+        uses: softprops/action-gh-release@v2
+        if: github.ref == 'refs/heads/main'
+        with:
+          tag_name: latest
+          name: Latest CVs
+          files: "*.pdf"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare site directory
+        run: |
+          mkdir -p _site
+          cp index.html style.css _site/
+          cp cv_en.html cv_fr.html _site/ 2>/dev/null || true
+          cp *.pdf _site/ 2>/dev/null || true
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
