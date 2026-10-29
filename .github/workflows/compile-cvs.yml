@@ -30,9 +30,7 @@ jobs:
         with:
           root_file: |
             cv_en_research.tex
-            cv_en_data.tex
             cv_fr_research.tex
-            cv_fr_data.tex
 
       - name: Upload PDF Release
         uses: softprops/action-gh-release@v2

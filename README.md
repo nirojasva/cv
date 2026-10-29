@@ -12,25 +12,22 @@ Personal interactive portfolio and version-controlled LaTeX CVs of **Nicolas Roj
 Access the interactive web page at: **[https://nirojasva.github.io/cv/](https://nirojasva.github.io/cv/)**
 
 - **Bilingual**: Instant toggle between 🇬🇧 English and 🇫🇷 French.
-- **Track Switcher**: Focus views for 🔬 **AI / Research** and 📊 **ML Engineering & Data Science**.
 - **Interactive UI**: Responsive dark theme, key metrics (85% detection rate, < 1s stream latency), publications at AAAI & NeurIPS with DOI/code links, and direct PDF downloads.
 
 ---
 
 ## 📄 CV Documents & Source Files
 
-| Language | Track | LaTeX Source | Download PDF |
+| Language | Profile | LaTeX Source | Download PDF |
 |---|---|---|---|
-| **English** | AI R&D & Research | [`cv_en_research.tex`](cv_en_research.tex) | [Download PDF](https://github.com/nirojasva/cv/releases/download/latest/cv_en_research.pdf) |
-| **English** | Data Science & ML | [`cv_en_data.tex`](cv_en_data.tex) | [Download PDF](https://github.com/nirojasva/cv/releases/download/latest/cv_en_data.pdf) |
-| **Français** | Ingénieur R&D / Recherche | [`cv_fr_research.tex`](cv_fr_research.tex) | [Download PDF](https://github.com/nirojasva/cv/releases/download/latest/cv_fr_research.pdf) |
-| **Français** | Data Scientist & ML | [`cv_fr_data.tex`](cv_fr_data.tex) | [Download PDF](https://github.com/nirojasva/cv/releases/download/latest/cv_fr_data.pdf) |
+| **English** | AI R&D Engineer / Research Engineer | [`cv_en_research.tex`](cv_en_research.tex) | [Download PDF](https://github.com/nirojasva/cv/releases/download/latest/cv_en_research.pdf) |
+| **Français** | Ingénieur R&D en IA / Research Engineer | [`cv_fr_research.tex`](cv_fr_research.tex) | [Download PDF](https://github.com/nirojasva/cv/releases/download/latest/cv_fr_research.pdf) |
 
 ---
 
 ## ⚙️ Automated CI/CD Pipeline
 Every push to `main` triggers a GitHub Actions workflow that:
-1. Compiles all 4 LaTeX sources into PDF files using `xu-cheng/latex-action`.
+1. Compiles LaTeX sources into PDF files using `xu-cheng/latex-action`.
 2. Packages `index.html`, `style.css`, and the compiled PDFs into `_site`.
 3. Automatically deploys the web page to **GitHub Pages**.
-4. Releases the latest version of all PDFs under the `latest` tag release.
+4. Releases the latest version of the PDFs under the `latest` tag release.
