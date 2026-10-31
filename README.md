@@ -12,7 +12,7 @@ Personal interactive portfolio and version-controlled LaTeX CVs of **Nicolas Roj
 Access the interactive web page at: **[https://nirojasva.github.io/cv/](https://nirojasva.github.io/cv/)**
 
 - **Bilingual**: Instant toggle between 🇬🇧 English and 🇫🇷 French.
-- **Interactive UI**: Responsive dark theme, key metrics (85% detection rate, < 1s stream latency), publications at AAAI & NeurIPS with DOI/code links, and direct PDF downloads.
+- **Interactive UI**: Responsive dark theme, bilingual support, scientific publications with DOI/code links, and direct PDF downloads.
 
 ---
 
