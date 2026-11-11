@@ -921,3 +921,13 @@ footer a:hover {
 .track-data-only {
   transition: opacity 0.3s ease;
 }
+
+/* CUSDIS COMMENTS SECTION */
+#cusdis_thread {
+  min-height: 200px;
+}
+
+#cusdis_thread iframe {
+  width: 100% !important;
+  color-scheme: dark;
+}
