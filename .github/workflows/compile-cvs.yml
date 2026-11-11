@@ -44,9 +44,14 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Prepare site directory
+        env:
+          PROFILE_PHOTO_B64: ${{ secrets.PROFILE_PHOTO_BASE64 }}
         run: |
           mkdir -p _site
-          cp index.html style.css _site/
+          if [ -n "$PROFILE_PHOTO_B64" ]; then
+            echo "$PROFILE_PHOTO_B64" | base64 -d > _site/profile.jpg
+          fi
+          cp index.html style.css profile.jpg _site/ 2>/dev/null || true
           cp cv_en.html cv_fr.html _site/ 2>/dev/null || true
           cp *.pdf _site/ 2>/dev/null || true
 
